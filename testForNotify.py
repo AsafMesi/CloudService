@@ -4,7 +4,7 @@ import sys
 import time
 from watchdog.observers import polling
 from watchdog.events import PatternMatchingEventHandler
-path = "/home/shir25/Pictures"
+path = "C:\\Users\\asaf4\\OneDrive\\Desktop\\ClientFolder"
 
 
 def notify_created(is_dir, new_path):

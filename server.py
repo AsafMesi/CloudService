@@ -13,8 +13,8 @@ port = int(sys.argv[1])
 # Dictionaries:
 clients_id_path = {}  # create dictionary that maps id to path in the server.
 
-# create dictionary that maps id to anothoer dictionary of computer number for clients
-# and its updated from others computer with the id:
+# create dictionary that maps id to another dictionary of computer number for clients,
+# and it's updated from others computer with the id:
 data_base = {}
 
 # Open server:
@@ -26,7 +26,7 @@ main_socket.listen(200)
 # Utils Functions: --------------------------------------------------------------------------------------------
 
 # This function set the path sep to '\\' in case of windows path and '/' otherwise.
-# Because most of the operation systems works with linux sep - we set the src sep to '/' by default.
+# Because most of the operating systems works with linux sep - we set the src sep to '/' by default.
 def get_path(src_platform, src_path, src_sep='/'):
     if src_platform == 'win32':
         src_sep = '\\'
@@ -116,7 +116,6 @@ def send_files(on_sock, src_path):
                     d = os.path.relpath(d, src_path)
                     on_sock.sendall(d.encode() + b'\n')
         on_sock.sendall('Done.'.encode() + b'\n')
-        on_sock.close()
 
 
 # creates the dirs by recursive in destination path
@@ -197,7 +196,7 @@ def update_computers(c_id, c_comp, cmd):
             data_base[c_id][k].append(cmd)
 
 
-# the server get update from a client by push command- the server performs the operation by the command it get
+# the server gets an update from a client by "push" command. The server performs the operation by the command it gets.
 def get_update(c_command, data_sock):
     global server_has_changed
 
@@ -293,7 +292,9 @@ if __name__ == "__main__":
 
     while True:
         # Waiting for client:
+        print("\nWaiting for client... \n")
         client_socket, address = main_socket.accept()
+        print(f"Accepted client - {address}\n")
         get_data_sock = client_socket.makefile(mode='rb')  # client joined- reading client socket by bytes
 
         # identification - get client's ID, computer number, operation system.

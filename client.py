@@ -85,7 +85,7 @@ def send_files(on_sock, src_path):
                             break
                         on_sock.sendall(data)
 
-        # sending empty directories.
+        # sending empty directories:
         on_sock.sendall("empty dirs:".encode('utf-8') + b'\n')
         for root, dirs, files in os.walk(src_path):
             for directory in dirs:
