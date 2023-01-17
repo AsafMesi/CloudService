@@ -1,10 +1,10 @@
 # CloudService
 Cloud service - monitor and update a chosen folder.
 
-While the cloud server is on, a client can connect to the server and backup his chosen folder.
+While the cloud server is on, a client can connect to the server and backup his chosen folder.\
 In addition, the server monitors the changes in the folder on the client's computer and changes the directory on the cloud according to those changes.
 
-The communication is based on TCP.
+### The communication is based on TCP.
 
 # Instructions
 * On one computer, open the server, on the other one, open the client.
