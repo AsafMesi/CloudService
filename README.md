@@ -20,3 +20,6 @@ During the first connection, the server creates a unique id for the client and b
 While the client program is on, the client uses this id.\
 If the client wants to get his folder to another computer, he can run the program so that the 5'th argument is the id.\
 The server will know how to manage between those computers and keep them updated according to the latest updates.
+
+## Authors
+### Asaf Mesialty & Shir Fintsy
