@@ -1,12 +1,8 @@
-import socket
 import os
 import sys
+import socket
 import time
-from client_file_observer import ClientFileObserver
-from file_syncer import FileSyncer, get_files, send_files, send_identifications, get_update
-
-pause_observer = None
-resume_observer = None
+import file_syncer
 
 if not (5 <= len(sys.argv) <= 6):
     raise ValueError("Please Enter parameters in the form:"
@@ -14,93 +10,138 @@ if not (5 <= len(sys.argv) <= 6):
 
 server_ip = sys.argv[1]
 server_port = int(sys.argv[2])
-dir_path = sys.argv[3]
+root = sys.argv[3]
 pulling_rate = int(sys.argv[4])
+
 user_id = 'None'
 client_id = 'None'
-status = "NewUser"
-server_os = os.name
 
-if not os.path.exists(dir_path):
-    raise ValueError(f"Directory '{dir_path}' does not exist\nPlease create it and re-run.")
+if len(sys.argv) == 6:      # 6
+    user_id = sys.argv[5]   # 5
 
-# When running the client with (user_id != None) the server will first send the content of the user's directory.
-# todo: Answer the q of real life syncing. (create new folder called mybackup or somthing like that), moving this dir?
-if len(sys.argv) == 6:
-    user_id = sys.argv[5]
-    status = "NewClient"
-    if os.listdir(dir_path):
-        raise ValueError(f"Please clear '{dir_path}' directory before getting the content from the server.\n")
+pause_observer = None
+resume_observer = None
 
 
-def init_new_user(server_sock):
-    global user_id, client_id, dir_path, server_os
-    with server_sock.makefile(mode='rb') as get_data_sock:
-        user_id = get_data_sock.readline().strip().decode()  # get new user id
-        client_id = get_data_sock.readline().strip().decode()  # get new client id
-        server_os = get_data_sock.readline().strip().decode()  # get server op name.
-    send_files(server_sock, dir_path)  # upload all `dir_path` content to the server.
+# connect to server and identity.
+def get_server_socket(conn_type):
+    server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_sock.connect((server_ip, server_port))
+    server_sock.sendall(user_id.encode() + b'\n')  # send user id
+    server_sock.sendall(client_id.encode() + b'\n')  # send user's client id
+    server_sock.sendall(sys.platform.encode() + b'\n')  # send client's operating system.
+    server_sock.sendall(conn_type.encode() + b'\n')  # send client connection type.
+    return server_sock
 
 
-def init_new_client(server_sock):
-    global client_id, dir_path, server_os
-    with server_sock.makefile(mode='rb') as get_data_sock:
-        client_id = get_data_sock.readline().strip().decode()  # get new client id
-        server_os = get_data_sock.readline().strip().decode()  # get server op name.
-    get_files(server_sock, dir_path, server_os)  # upload all my content from the server to `dir_path`.
+def notify_server(event):
+    print(event)
+    if event.event_type == "modified":
+        if not event.is_directory:
+            notify_file_modified(event)
+        # directory renaming cause move and modified event, so we will ignore the modified event for directories.
+        return
+    pull()
+    match event.event_type:
+        case "created":
+            notify_created(event)
+        case "deleted":
+            notify_deleted(event)
+        case "moved":
+            notify_moved(event)
+        case _:
+            print("unknown event")
 
 
-def init_connection(server_sock, c_type):
-    if c_type == 'NewUser':
-        init_new_user(server_sock)
-    elif c_type == 'NewClient':
-        init_new_client(server_sock)
+def notify_created(event):
+    if os.path.splitext(event.src_path)[1] == ".swp":
+        return
+    relpath = os.path.relpath(event.src_path, root)
+    csv_cmd = f"{event.event_type},{str(event.is_directory)},{relpath}"
+    server_sock = get_server_socket("Push")
+    server_sock.sendall(csv_cmd.encode() + b'\n')
+    if not event.is_directory:
+        file_syncer.send_file(server_sock, root, event.src_path)
+    server_sock.close()
+
+
+def notify_deleted(event):
+    if os.path.splitext(event.src_path)[1] == ".swp":
+        dir_name = os.path.dirname(event.src_path)
+        file_name = os.path.basename(event.src_path)[1:-4]  # slice the first "." and the last ".swp"
+        src_path = os.path.join(dir_name, file_name)
+        event.src_path = src_path
+        notify_file_modified(event)
     else:
+        relpath = os.path.relpath(event.src_path, root)
+        csv_cmd = f"{event.event_type},{str(event.is_directory)},{relpath}"
+        server_sock = get_server_socket("Push")
+        server_sock.sendall(csv_cmd.encode() + b'\n')
         server_sock.close()
-        raise ValueError(f"Unknown connection type for initialization! got {c_type}.\n")
+
+
+def notify_moved(event):
+    old_relpath = os.path.relpath(event.src_path, root)
+    new_relpath = os.path.relpath(event.dest_path, root)
+    csv_cmd = f"{event.event_type},{str(event.is_directory)},{old_relpath},{new_relpath}"
+    server_sock = get_server_socket("Push")
+    server_sock.sendall(csv_cmd.encode() + b'\n')
+    server_sock.close()
+
+
+def notify_file_modified(event):
+    notify_server(file_syncer.FileEvent("deleted", False, event.src_path))
+    notify_server(file_syncer.FileEvent("created",  False, event.src_path))
 
 
 def pull():
     pulling = True
     while pulling:
-        server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_sock.connect((server_ip, server_port))
-        send_identifications(server_sock, user_id, client_id, "Pull")
-        with server_sock.makefile(mode='rb') as get_update_sock:
-            updates_count = int(get_update_sock.readline().strip().decode())
-            if updates_count > 0:
-                csv_command = get_update_sock.readline().strip().decode()
-                cmd_type, is_dir, path = csv_command.split(',', 2)
-                pause_observer()
-                get_update(cmd_type, is_dir, path, server_sock, dir_path, server_os)
-                resume_observer()
-                server_sock.sendall(b'1\n')  # approve update
-            else:
-                pulling = False
+        server_sock = get_server_socket("Pull")
+        read_socket = server_sock.makefile(mode='rb')
+        updates_count = int(read_socket.readline().strip().decode())
+        if updates_count > 0:
+            server_os = read_socket.readline().strip().decode()
+            pause_observer()
+            applied_cmd = file_syncer.get_update(read_socket, root, server_os)
+            print(applied_cmd)
+            resume_observer()
+        else:
+            pulling = False
+        read_socket.close()
         server_sock.close()
 
 
-def get_push_socket():
-    pull()
-    server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_sock.connect((server_ip, server_port))
-    send_identifications(server_sock, user_id, client_id, "Push")
-    return server_sock
+def init_new_user():
+    global user_id, client_id
+    server_socket = get_server_socket("NewUser")
+    get_data_sock = server_socket.makefile(mode='rb')
+    user_id = get_data_sock.readline().strip().decode()
+    client_id = get_data_sock.readline().strip().decode()
+    get_data_sock.close()
+    file_syncer.send_files(server_socket, root)
 
 
-# todo: answer the q of what to do in case the id is not valid.
-if __name__ == "__main__":
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.connect((server_ip, server_port))  # connect
-    send_identifications(server_socket, user_id, client_id, status)  # identify
-    init_connection(server_socket, status)  # get or send data.
+def init_new_client():
+    global root, client_id
+    if os.listdir(root):
+        raise ValueError(f"Please clear '{root}' directory before getting the content from the server.\n")
+    server_socket = get_server_socket("NewClient")
+    get_data_sock = server_socket.makefile(mode='rb')
+    client_id = get_data_sock.readline().strip().decode()
+    file_syncer.get_files(get_data_sock, root)
+    get_data_sock.close()
     server_socket.close()
 
-    # from now on the client app is running, but the client will connect to the server only to send/receive data.
-    # -----------------------------------------------------------------------------------------------------------
-    status = "Push"
-    syncer = FileSyncer(dir_path, get_push_socket)
-    observer = ClientFileObserver(dir_path, syncer)
+
+# -------------------------------------------------------------------------------------------------------------------
+if __name__ == "__main__":
+    if user_id == "None":
+        init_new_user()
+    else:
+        init_new_client()
+
+    observer = file_syncer.ClientFileObserver(root, on_any_event=notify_server)
 
     # While pulling updates, we would like to pause the observer.
     pause_observer = observer.un_schedule
@@ -116,3 +157,6 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         observer.stop()
         observer.join()
+
+
+
