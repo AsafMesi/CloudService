@@ -36,12 +36,6 @@ class ConnectionLogger:
                   f"Client ID: {client_id}"
         self._log(message)
 
-    def connection_established(self, user_id, client_id):
-        message = f"Connection established!\n" \
-                  f"User ID: {user_id}\n" \
-                  f"Client ID: {client_id}"
-        self._log(message)
-
     def push_requested(self, req):
         message = f"PUSH\n" \
                   f"Request: {req}."

@@ -3,6 +3,7 @@ import socket
 import sys
 import file_syncer
 import client_manager
+from connection_logger import ConnectionLogger
 
 port = int(sys.argv[1])
 root = os.getcwd()
@@ -37,10 +38,12 @@ def get_identifications(read_sock):
 
 # -------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
+    log = ConnectionLogger()
     cu = client_manager.ClientManager(root)
     while True:
         # Waiting for client:
         client_socket, address = server_socket.accept()
+        log.connection_accepted(address)
         get_data_sock = client_socket.makefile(mode='rb')
         get_identifications(get_data_sock)
         match client_conn_type:
@@ -55,6 +58,7 @@ if __name__ == "__main__":
                 file_syncer.get_files(get_data_sock, user_root)
                 get_data_sock.close()
                 client_socket.close()
+                log.user_created(user_id)
 
             case "NewClient":
                 get_data_sock.close()
@@ -62,6 +66,7 @@ if __name__ == "__main__":
                 client_socket.sendall(client_id.encode() + b'\n')
                 user_root = cu.get_user_root(user_id)
                 file_syncer.send_files(client_socket, user_root)
+                log.client_created(user_id, client_id)
 
             case "Push":
                 user_root = cu.get_user_root(user_id)
@@ -69,6 +74,7 @@ if __name__ == "__main__":
                 get_data_sock.close()
                 if cmd:
                     cu.update_clients(user_id, client_id, cmd)
+                    log.push_requested(cmd)
 
             case "Pull":
                 get_data_sock.close()
@@ -79,9 +85,14 @@ if __name__ == "__main__":
                     user_root = cu.get_user_root(user_id)
                     update = updates.pop(0)
                     file_syncer.send_update(client_socket, user_root, update)
+                    log.push_requested(update)
                 else:
                     client_socket.close()
 
             case _:
-                raise ValueError("Unknown client connection type")
+                err = "Unknown client connection type"
+                log.connection_error(err)
+                raise ValueError(err)
+
         clear_logged_client()
+        log.connection_ended()
