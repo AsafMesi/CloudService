@@ -36,13 +36,15 @@ class ConnectionLogger:
                   f"Client ID: {client_id}"
         self._log(message)
 
-    def push_requested(self, req):
+    def push_requested(self, user_id, client_id, req):
         message = f"PUSH\n" \
+                  f"User ID: {user_id}, Client ID: {client_id}\n" \
                   f"Request: {req}."
         self._log(message)
 
-    def pull_requested(self, req):
+    def pull_requested(self, user_id, client_id, req):
         message = f"PULL\n" \
+                  f"User ID: {user_id}, Client ID: {client_id}\n" \
                   f"Request: {req}."
         self._log(message)
 

@@ -1,478 +1,447 @@
 CloudService connection log started!
-[03:44:27.548386] Server accepted connection from: (IP, port) = ('10.0.2.15', 36410)
-[03:44:27.552428] New user has been created!
-User ID: P0eKB8Mc8Y
+[04:02:25.159555] Server accepted connection from: (IP, port) = ('10.0.2.15', 40940)
+[04:02:25.173314] New user has been created!
+User ID: QYk60YGk0K
 Client ID: 1
-[03:44:27.552482] Connection ended!
+[04:02:25.173378] Connection ended!
 
-[03:44:28.554424] Server accepted connection from: (IP, port) = ('10.0.2.15', 36414)
-[03:44:28.554628] Connection ended!
+[04:02:26.175353] Server accepted connection from: (IP, port) = ('10.0.2.15', 34800)
+[04:02:26.175525] Connection ended!
 
-[03:44:29.556415] Server accepted connection from: (IP, port) = ('10.0.2.15', 36420)
-[03:44:29.556610] Connection ended!
+[04:02:27.180792] Server accepted connection from: (IP, port) = ('10.0.2.15', 34808)
+[04:02:27.181548] Connection ended!
 
-[03:44:30.547155] Server accepted connection from: (IP, port) = ('127.0.0.1', 41350)
-[03:44:30.550592] New client has been created!
-User ID: P0eKB8Mc8Y
+[04:02:27.267414] Server accepted connection from: (IP, port) = ('127.0.0.1', 51898)
+[04:02:27.271411] New client has been created!
+User ID: QYk60YGk0K
 Client ID: 2
-[03:44:30.552070] Connection ended!
+[04:02:27.272077] Connection ended!
+
+[04:02:28.184441] Server accepted connection from: (IP, port) = ('10.0.2.15', 34810)
+[04:02:28.184595] Connection ended!
+
+[04:02:28.289671] Server accepted connection from: (IP, port) = ('127.0.0.1', 51904)
+[04:02:28.289917] Connection ended!
+
+[04:02:29.187841] Server accepted connection from: (IP, port) = ('10.0.2.15', 34820)
+[04:02:29.187992] Connection ended!
+
+[04:02:29.188033] Server accepted connection from: (IP, port) = ('10.0.2.15', 34824)
+[04:02:29.188082] Connection ended!
+
+[04:02:29.190982] Server accepted connection from: (IP, port) = ('10.0.2.15', 34826)
+[04:02:29.191296] PUSH
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/new_dir.
+[04:02:29.191404] Connection ended!
+
+[04:02:29.291139] Server accepted connection from: (IP, port) = ('127.0.0.1', 51910)
+[04:02:29.291329] PULL
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/new_dir.
+[04:02:29.291359] Connection ended!
+
+[04:02:29.293716] Server accepted connection from: (IP, port) = ('127.0.0.1', 51914)
+[04:02:29.293846] Connection ended!
+
+[04:02:30.188760] Server accepted connection from: (IP, port) = ('10.0.2.15', 34834)
+[04:02:30.188935] Connection ended!
+
+[04:02:30.191949] Server accepted connection from: (IP, port) = ('10.0.2.15', 34850)
+[04:02:30.192268] PUSH
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/new_file.
+[04:02:30.192368] Connection ended!
+
+[04:02:30.193361] Server accepted connection from: (IP, port) = ('10.0.2.15', 34852)
+[04:02:30.193640] Connection ended!
 
-[03:44:30.557217] Server accepted connection from: (IP, port) = ('10.0.2.15', 36432)
-[03:44:30.557981] Connection ended!
+[04:02:30.295841] Server accepted connection from: (IP, port) = ('127.0.0.1', 51920)
+[04:02:30.300829] PULL
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/new_file.
+[04:02:30.300900] Connection ended!
+
+[04:02:30.301642] Server accepted connection from: (IP, port) = ('127.0.0.1', 51932)
+[04:02:30.301824] Connection ended!
+
+[04:02:31.189728] Server accepted connection from: (IP, port) = ('10.0.2.15', 34856)
+[04:02:31.190004] Connection ended!
+
+[04:02:31.191303] Server accepted connection from: (IP, port) = ('10.0.2.15', 34864)
+[04:02:31.192220] PUSH
+User ID: QYk60YGk0K, Client ID: 1
+Request: moved,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/file1.txt,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/renamed_file.txt.
+[04:02:31.192345] Connection ended!
+
+[04:02:31.202448] Server accepted connection from: (IP, port) = ('10.0.2.15', 34874)
+[04:02:31.202639] Connection ended!
+
+[04:02:31.323987] Server accepted connection from: (IP, port) = ('127.0.0.1', 51944)
+[04:02:31.325319] PULL
+User ID: QYk60YGk0K, Client ID: 2
+Request: moved,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/file1.txt,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/renamed_file.txt.
+[04:02:31.325398] Connection ended!
+
+[04:02:31.325655] Server accepted connection from: (IP, port) = ('127.0.0.1', 51948)
+[04:02:31.325994] Connection ended!
+
+[04:02:32.202971] Server accepted connection from: (IP, port) = ('10.0.2.15', 34890)
+[04:02:32.203114] Connection ended!
+
+[04:02:32.326736] Server accepted connection from: (IP, port) = ('127.0.0.1', 51958)
+[04:02:32.326904] Connection ended!
+
+[04:02:32.330473] Server accepted connection from: (IP, port) = ('127.0.0.1', 51974)
+[04:02:32.330700] Connection ended!
+
+[04:02:32.331031] Server accepted connection from: (IP, port) = ('127.0.0.1', 51988)
+[04:02:32.331347] PUSH
+User ID: QYk60YGk0K, Client ID: 2
+Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/file2.txt.
+[04:02:32.331448] Connection ended!
+
+[04:02:32.331596] Server accepted connection from: (IP, port) = ('127.0.0.1', 51996)
+[04:02:32.331730] Connection ended!
 
-[03:44:31.554656] Server accepted connection from: (IP, port) = ('127.0.0.1', 41352)
-[03:44:31.554843] Connection ended!
+[04:02:32.332101] Server accepted connection from: (IP, port) = ('127.0.0.1', 51998)
+[04:02:32.334656] PUSH
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/file2.txt.
+[04:02:32.334797] Connection ended!
+
+[04:02:33.204556] Server accepted connection from: (IP, port) = ('10.0.2.15', 34906)
+[04:02:33.204893] PULL
+User ID: QYk60YGk0K, Client ID: 1
+Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/file2.txt.
+[04:02:33.204929] Connection ended!
+
+[04:02:33.205688] Server accepted connection from: (IP, port) = ('10.0.2.15', 34910)
+[04:02:33.205974] PULL
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/file2.txt.
+[04:02:33.206105] Connection ended!
+
+[04:02:33.207309] Server accepted connection from: (IP, port) = ('10.0.2.15', 34922)
+[04:02:33.207513] Connection ended!
+
+[04:02:33.331694] Server accepted connection from: (IP, port) = ('127.0.0.1', 52008)
+[04:02:33.331863] Connection ended!
+
+[04:02:33.337148] Server accepted connection from: (IP, port) = ('127.0.0.1', 52022)
+[04:02:33.337277] Connection ended!
+
+[04:02:33.337509] Server accepted connection from: (IP, port) = ('127.0.0.1', 52024)
+[04:02:33.337625] PUSH
+User ID: QYk60YGk0K, Client ID: 2
+Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/file3.txt.
+[04:02:33.337651] Connection ended!
+
+[04:02:34.208232] Server accepted connection from: (IP, port) = ('10.0.2.15', 34930)
+[04:02:34.208587] PULL
+User ID: QYk60YGk0K, Client ID: 1
+Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/file3.txt.
+[04:02:34.208654] Connection ended!
 
-[03:44:31.566498] Server accepted connection from: (IP, port) = ('10.0.2.15', 36440)
-[03:44:31.566660] Connection ended!
+[04:02:34.214118] Server accepted connection from: (IP, port) = ('10.0.2.15', 34940)
+[04:02:34.214352] Connection ended!
 
-[03:44:32.555760] Server accepted connection from: (IP, port) = ('127.0.0.1', 41366)
-[03:44:32.555948] Connection ended!
+[04:02:34.333905] Server accepted connection from: (IP, port) = ('127.0.0.1', 52030)
+[04:02:34.334140] Connection ended!
 
-[03:44:32.568773] Server accepted connection from: (IP, port) = ('10.0.2.15', 36448)
-[03:44:32.568924] Connection ended!
+[04:02:35.217356] Server accepted connection from: (IP, port) = ('10.0.2.15', 34954)
+[04:02:35.217500] Connection ended!
 
-[03:44:33.563915] Server accepted connection from: (IP, port) = ('127.0.0.1', 56884)
-[03:44:33.564193] Connection ended!
+[04:02:35.217540] Server accepted connection from: (IP, port) = ('10.0.2.15', 34958)
+[04:02:35.217588] Connection ended!
 
-[03:44:33.568468] Server accepted connection from: (IP, port) = ('10.0.2.15', 43162)
-[03:44:33.568609] Connection ended!
+[04:02:35.220075] Server accepted connection from: (IP, port) = ('10.0.2.15', 34974)
+[04:02:35.220322] PUSH
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir1/file1.txt.
+[04:02:35.220354] Connection ended!
 
-[03:44:33.570025] Server accepted connection from: (IP, port) = ('10.0.2.15', 43174)
-[03:44:33.570548] PUSH
-Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/new_dir.
-[03:44:33.570593] Connection ended!
+[04:02:35.220431] Server accepted connection from: (IP, port) = ('10.0.2.15', 34986)
+[04:02:35.220491] Connection ended!
 
-[03:44:33.570703] Server accepted connection from: (IP, port) = ('10.0.2.15', 43184)
-[03:44:33.570796] Connection ended!
+[04:02:35.223017] Server accepted connection from: (IP, port) = ('10.0.2.15', 34990)
+[04:02:35.224629] PUSH
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir4/file2.txt.
+[04:02:35.224681] Connection ended!
 
-[03:44:34.569118] Server accepted connection from: (IP, port) = ('127.0.0.1', 56900)
-[03:44:34.574003] PUSH
-Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/new_dir.
-[03:44:34.574109] Connection ended!
+[04:02:35.224796] Server accepted connection from: (IP, port) = ('10.0.2.15', 35000)
+[04:02:35.224865] Connection ended!
 
-[03:44:34.574166] Server accepted connection from: (IP, port) = ('10.0.2.15', 43194)
-[03:44:34.574280] Connection ended!
+[04:02:35.225455] Server accepted connection from: (IP, port) = ('10.0.2.15', 35006)
+[04:02:35.227351] PUSH
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir2/file2.txt.
+[04:02:35.227472] Connection ended!
 
-[03:44:34.574653] Server accepted connection from: (IP, port) = ('127.0.0.1', 56912)
-[03:44:34.574808] Connection ended!
+[04:02:35.227810] Server accepted connection from: (IP, port) = ('10.0.2.15', 35008)
+[04:02:35.227979] Connection ended!
 
-[03:44:35.567813] Server accepted connection from: (IP, port) = ('10.0.2.15', 43210)
-[03:44:35.568123] Connection ended!
+[04:02:35.229747] Server accepted connection from: (IP, port) = ('10.0.2.15', 35020)
+[04:02:35.230463] PUSH
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir3.
+[04:02:35.230588] Connection ended!
 
-[03:44:35.568608] Server accepted connection from: (IP, port) = ('10.0.2.15', 43216)
-[03:44:35.571363] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/new_file.
-[03:44:35.571490] Connection ended!
+[04:02:35.230774] Server accepted connection from: (IP, port) = ('10.0.2.15', 35028)
+[04:02:35.231217] Connection ended!
 
-[03:44:35.576437] Server accepted connection from: (IP, port) = ('10.0.2.15', 43232)
-[03:44:35.576566] Connection ended!
+[04:02:35.231358] Server accepted connection from: (IP, port) = ('10.0.2.15', 35036)
+[04:02:35.231493] Connection ended!
+
+[04:02:35.233082] Server accepted connection from: (IP, port) = ('10.0.2.15', 35046)
+[04:02:35.233580] Connection ended!
+
+[04:02:35.233720] Server accepted connection from: (IP, port) = ('10.0.2.15', 35050)
+[04:02:35.233859] Connection ended!
 
-[03:44:35.576606] Server accepted connection from: (IP, port) = ('127.0.0.1', 56926)
-[03:44:35.576758] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/new_file.
-[03:44:35.576785] Connection ended!
+[04:02:35.236212] Server accepted connection from: (IP, port) = ('10.0.2.15', 35062)
+[04:02:35.236630] Connection ended!
 
-[03:44:35.577857] Server accepted connection from: (IP, port) = ('127.0.0.1', 56932)
-[03:44:35.578013] Connection ended!
+[04:02:35.236776] Server accepted connection from: (IP, port) = ('10.0.2.15', 35076)
+[04:02:35.236917] Connection ended!
 
-[03:44:36.579486] Server accepted connection from: (IP, port) = ('10.0.2.15', 43236)
-[03:44:36.579841] Connection ended!
+[04:02:35.334478] Server accepted connection from: (IP, port) = ('127.0.0.1', 52040)
+[04:02:35.338578] PULL
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir1/file1.txt.
+[04:02:35.338714] Connection ended!
 
-[03:44:36.579959] Server accepted connection from: (IP, port) = ('127.0.0.1', 56940)
-[03:44:36.580023] Connection ended!
+[04:02:35.338989] Server accepted connection from: (IP, port) = ('127.0.0.1', 52050)
+[04:02:35.339216] PULL
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir4/file2.txt.
+[04:02:35.339246] Connection ended!
 
-[03:44:37.576537] Server accepted connection from: (IP, port) = ('10.0.2.15', 43244)
-[03:44:37.576674] Connection ended!
+[04:02:35.340441] Server accepted connection from: (IP, port) = ('127.0.0.1', 52062)
+[04:02:35.342070] PULL
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir2/file2.txt.
+[04:02:35.342207] Connection ended!
 
-[03:44:37.576919] Server accepted connection from: (IP, port) = ('10.0.2.15', 43256)
-[03:44:37.577041] PUSH
-Request: moved,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/file1.txt,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/renamed_file.txt.
-[03:44:37.577067] Connection ended!
-
-[03:44:37.583473] Server accepted connection from: (IP, port) = ('10.0.2.15', 43262)
-[03:44:37.583723] Connection ended!
-
-[03:44:37.583863] Server accepted connection from: (IP, port) = ('127.0.0.1', 56944)
-[03:44:37.584058] PUSH
-Request: moved,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/file1.txt,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/renamed_file.txt.
-[03:44:37.585304] Connection ended!
-
-[03:44:37.585611] Server accepted connection from: (IP, port) = ('127.0.0.1', 56954)
-[03:44:37.585752] Connection ended!
-
-[03:44:38.585570] Server accepted connection from: (IP, port) = ('10.0.2.15', 43272)
-[03:44:38.586388] Connection ended!
-
-[03:44:38.589253] Server accepted connection from: (IP, port) = ('127.0.0.1', 56970)
-[03:44:38.589438] Connection ended!
-
-[03:44:39.593168] Server accepted connection from: (IP, port) = ('10.0.2.15', 43278)
-[03:44:39.593751] Connection ended!
-
-[03:44:39.593844] Server accepted connection from: (IP, port) = ('127.0.0.1', 56980)
-[03:44:39.593906] Connection ended!
-
-[03:44:39.597540] Server accepted connection from: (IP, port) = ('127.0.0.1', 56996)
-[03:44:39.597674] Connection ended!
-
-[03:44:39.597875] Server accepted connection from: (IP, port) = ('127.0.0.1', 57008)
-[03:44:39.597997] PUSH
-Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/file2.txt.
-[03:44:39.598024] Connection ended!
-
-[03:44:39.598091] Server accepted connection from: (IP, port) = ('127.0.0.1', 57018)
-[03:44:39.598144] Connection ended!
-
-[03:44:39.598404] Server accepted connection from: (IP, port) = ('127.0.0.1', 57034)
-[03:44:39.604905] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/file2.txt.
-[03:44:39.604956] Connection ended!
-
-[03:44:40.598737] Server accepted connection from: (IP, port) = ('127.0.0.1', 57040)
-[03:44:40.602771] Connection ended!
-
-[03:44:40.602976] Server accepted connection from: (IP, port) = ('10.0.2.15', 43290)
-[03:44:40.603543] PUSH
-Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/file2.txt.
-[03:44:40.603649] Connection ended!
-
-[03:44:40.603897] Server accepted connection from: (IP, port) = ('10.0.2.15', 43306)
-[03:44:40.604173] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/file2.txt.
-[03:44:40.604263] Connection ended!
-
-[03:44:40.604907] Server accepted connection from: (IP, port) = ('10.0.2.15', 43310)
-[03:44:40.606278] Connection ended!
-
-[03:44:41.604739] Server accepted connection from: (IP, port) = ('127.0.0.1', 57050)
-[03:44:41.605117] Connection ended!
-
-[03:44:41.607813] Server accepted connection from: (IP, port) = ('10.0.2.15', 43320)
-[03:44:41.607948] Connection ended!
-
-[03:44:41.614813] Server accepted connection from: (IP, port) = ('127.0.0.1', 57064)
-[03:44:41.614957] Connection ended!
-
-[03:44:41.615184] Server accepted connection from: (IP, port) = ('127.0.0.1', 57066)
-[03:44:41.615344] PUSH
-Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/file3.txt.
-[03:44:41.615373] Connection ended!
-
-[03:44:42.606977] Server accepted connection from: (IP, port) = ('127.0.0.1', 47642)
-[03:44:42.607133] Connection ended!
-
-[03:44:42.612393] Server accepted connection from: (IP, port) = ('10.0.2.15', 47900)
-[03:44:42.612857] PUSH
-Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/file3.txt.
-[03:44:42.612897] Connection ended!
-
-[03:44:42.613208] Server accepted connection from: (IP, port) = ('10.0.2.15', 47902)
-[03:44:42.613318] Connection ended!
-
-[03:44:43.609048] Server accepted connection from: (IP, port) = ('127.0.0.1', 47648)
-[03:44:43.614285] Connection ended!
-
-[03:44:43.615477] Server accepted connection from: (IP, port) = ('10.0.2.15', 47918)
-[03:44:43.615638] Connection ended!
-
-[03:44:44.615832] Server accepted connection from: (IP, port) = ('127.0.0.1', 47656)
-[03:44:44.619447] Connection ended!
-
-[03:44:44.619690] Server accepted connection from: (IP, port) = ('10.0.2.15', 47924)
-[03:44:44.619842] Connection ended!
-
-[03:44:45.620945] Server accepted connection from: (IP, port) = ('127.0.0.1', 47668)
-[03:44:45.621264] Connection ended!
-
-[03:44:45.621428] Server accepted connection from: (IP, port) = ('10.0.2.15', 47932)
-[03:44:45.621554] Connection ended!
-
-[03:44:45.621702] Server accepted connection from: (IP, port) = ('10.0.2.15', 47946)
-[03:44:45.621825] Connection ended!
-
-[03:44:45.622479] Server accepted connection from: (IP, port) = ('10.0.2.15', 47954)
-[03:44:45.622761] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir2/file2.txt.
-[03:44:45.623504] Connection ended!
-
-[03:44:45.623843] Server accepted connection from: (IP, port) = ('10.0.2.15', 47962)
-[03:44:45.624054] Connection ended!
-
-[03:44:45.629663] Server accepted connection from: (IP, port) = ('10.0.2.15', 47968)
-[03:44:45.630176] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir4/file2.txt.
-[03:44:45.630283] Connection ended!
-
-[03:44:45.630453] Server accepted connection from: (IP, port) = ('10.0.2.15', 47984)
-[03:44:45.631001] Connection ended!
-
-[03:44:45.631123] Server accepted connection from: (IP, port) = ('10.0.2.15', 47992)
-[03:44:45.631328] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir1/file1.txt.
-[03:44:45.631410] Connection ended!
-
-[03:44:45.631538] Server accepted connection from: (IP, port) = ('10.0.2.15', 48006)
-[03:44:45.631881] Connection ended!
-
-[03:44:45.631994] Server accepted connection from: (IP, port) = ('10.0.2.15', 48008)
-[03:44:45.632105] Connection ended!
-
-[03:44:45.632224] Server accepted connection from: (IP, port) = ('10.0.2.15', 48010)
-[03:44:45.632552] Connection ended!
-
-[03:44:45.632730] Server accepted connection from: (IP, port) = ('10.0.2.15', 48026)
-[03:44:45.632873] Connection ended!
-
-[03:44:45.633015] Server accepted connection from: (IP, port) = ('10.0.2.15', 48028)
-[03:44:45.633406] Connection ended!
-
-[03:44:45.633521] Server accepted connection from: (IP, port) = ('10.0.2.15', 48034)
-[03:44:45.633705] PUSH
-Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir3.
-[03:44:45.633787] Connection ended!
-
-[03:44:45.633910] Server accepted connection from: (IP, port) = ('10.0.2.15', 48036)
-[03:44:45.634151] Connection ended!
-
-[03:44:45.634259] Server accepted connection from: (IP, port) = ('10.0.2.15', 48038)
-[03:44:45.634367] Connection ended!
-
-[03:44:46.622675] Server accepted connection from: (IP, port) = ('127.0.0.1', 47678)
-[03:44:46.627993] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir2/file2.txt.
-[03:44:46.628176] Connection ended!
-
-[03:44:46.628291] Server accepted connection from: (IP, port) = ('10.0.2.15', 48046)
-[03:44:46.628480] Connection ended!
-
-[03:44:46.628743] Server accepted connection from: (IP, port) = ('127.0.0.1', 47682)
-[03:44:46.629016] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir4/file2.txt.
-[03:44:46.629102] Connection ended!
-
-[03:44:46.630249] Server accepted connection from: (IP, port) = ('127.0.0.1', 47698)
-[03:44:46.632522] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir1/file1.txt.
-[03:44:46.632646] Connection ended!
-
-[03:44:46.633794] Server accepted connection from: (IP, port) = ('127.0.0.1', 47704)
-[03:44:46.635573] PUSH
-Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir3.
-[03:44:46.635711] Connection ended!
-
-[03:44:46.636895] Server accepted connection from: (IP, port) = ('127.0.0.1', 47712)
-[03:44:46.640669] Connection ended!
-
-[03:44:47.629857] Server accepted connection from: (IP, port) = ('10.0.2.15', 48062)
-[03:44:47.630420] Connection ended!
-
-[03:44:47.642248] Server accepted connection from: (IP, port) = ('127.0.0.1', 47720)
-[03:44:47.642521] Connection ended!
-
-[03:44:48.636948] Server accepted connection from: (IP, port) = ('10.0.2.15', 48066)
-[03:44:48.637190] Connection ended!
-
-[03:44:48.643137] Server accepted connection from: (IP, port) = ('127.0.0.1', 47734)
-[03:44:48.643396] Connection ended!
-
-[03:44:49.638851] Server accepted connection from: (IP, port) = ('10.0.2.15', 48078)
-[03:44:49.643007] Connection ended!
-
-[03:44:49.645556] Server accepted connection from: (IP, port) = ('127.0.0.1', 47742)
-[03:44:49.645740] Connection ended!
-
-[03:44:50.643447] Server accepted connection from: (IP, port) = ('10.0.2.15', 48082)
-[03:44:50.643614] Connection ended!
-
-[03:44:50.646926] Server accepted connection from: (IP, port) = ('127.0.0.1', 47746)
-[03:44:50.647283] Connection ended!
-
-[03:44:50.647738] Server accepted connection from: (IP, port) = ('127.0.0.1', 47748)
-[03:44:50.647864] Connection ended!
-
-[03:44:50.648096] Server accepted connection from: (IP, port) = ('127.0.0.1', 47760)
-[03:44:50.648340] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/connection_logger.py.
-[03:44:50.648424] Connection ended!
-
-[03:44:50.648559] Server accepted connection from: (IP, port) = ('127.0.0.1', 47772)
-[03:44:50.648677] Connection ended!
-
-[03:44:50.650695] Server accepted connection from: (IP, port) = ('127.0.0.1', 47786)
-[03:44:50.651214] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/Hello/File2.py.
-[03:44:50.651321] Connection ended!
-
-[03:44:50.651475] Server accepted connection from: (IP, port) = ('127.0.0.1', 47792)
-[03:44:50.651604] Connection ended!
-
-[03:44:50.653556] Server accepted connection from: (IP, port) = ('127.0.0.1', 47796)
-[03:44:50.653919] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/Hello/File1.py.
-[03:44:50.654010] Connection ended!
-
-[03:44:50.654167] Server accepted connection from: (IP, port) = ('127.0.0.1', 47802)
-[03:44:50.654685] Connection ended!
-
-[03:44:50.657378] Server accepted connection from: (IP, port) = ('127.0.0.1', 47812)
-[03:44:50.657809] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/file_syncer.py.
-[03:44:50.657905] Connection ended!
-
-[03:44:50.658072] Server accepted connection from: (IP, port) = ('127.0.0.1', 47816)
-[03:44:50.658609] Connection ended!
-
-[03:44:50.658804] Server accepted connection from: (IP, port) = ('127.0.0.1', 47820)
-[03:44:50.659016] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/Hello/check.txt.
-[03:44:50.659098] Connection ended!
-
-[03:44:50.659227] Server accepted connection from: (IP, port) = ('127.0.0.1', 47832)
-[03:44:50.659577] Connection ended!
-
-[03:44:50.659724] Server accepted connection from: (IP, port) = ('127.0.0.1', 47838)
-[03:44:50.659850] Connection ended!
-
-[03:44:50.659976] Server accepted connection from: (IP, port) = ('127.0.0.1', 47852)
-[03:44:50.660312] Connection ended!
-
-[03:44:50.660425] Server accepted connection from: (IP, port) = ('127.0.0.1', 47856)
-[03:44:50.660536] Connection ended!
-
-[03:44:50.661941] Server accepted connection from: (IP, port) = ('127.0.0.1', 47858)
-[03:44:50.662310] Connection ended!
-
-[03:44:50.662423] Server accepted connection from: (IP, port) = ('127.0.0.1', 47870)
-[03:44:50.662614] PUSH
-Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/Empty.
-[03:44:50.662824] Connection ended!
-
-[03:44:51.644791] Server accepted connection from: (IP, port) = ('10.0.2.15', 48092)
-[03:44:51.648402] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/connection_logger.py.
-[03:44:51.651487] Connection ended!
-
-[03:44:51.651661] Server accepted connection from: (IP, port) = ('127.0.0.1', 47880)
-[03:44:51.651834] Connection ended!
-
-[03:44:51.652126] Server accepted connection from: (IP, port) = ('10.0.2.15', 48096)
-[03:44:51.652513] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/Hello/File2.py.
-[03:44:51.652601] Connection ended!
-
-[03:44:51.653308] Server accepted connection from: (IP, port) = ('10.0.2.15', 48100)
-[03:44:51.653627] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/Hello/File1.py.
-[03:44:51.653715] Connection ended!
-
-[03:44:51.654390] Server accepted connection from: (IP, port) = ('10.0.2.15', 48112)
-[03:44:51.656793] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/file_syncer.py.
-[03:44:51.656914] Connection ended!
-
-[03:44:51.657646] Server accepted connection from: (IP, port) = ('10.0.2.15', 48126)
-[03:44:51.657924] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/Hello/check.txt.
-[03:44:51.658094] Connection ended!
-
-[03:44:51.658709] Server accepted connection from: (IP, port) = ('10.0.2.15', 48142)
-[03:44:51.661360] PUSH
-Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/Jorge/Empty.
-[03:44:51.661545] Connection ended!
-
-[03:44:51.662303] Server accepted connection from: (IP, port) = ('10.0.2.15', 48146)
-[03:44:51.662474] Connection ended!
-
-[03:44:52.653475] Server accepted connection from: (IP, port) = ('127.0.0.1', 58400)
-[03:44:52.653987] Connection ended!
-
-[03:44:52.662992] Server accepted connection from: (IP, port) = ('10.0.2.15', 39956)
-[03:44:52.663176] Connection ended!
-
-[03:44:53.663434] Server accepted connection from: (IP, port) = ('127.0.0.1', 58414)
-[03:44:53.663692] Connection ended!
-
-[03:44:53.669727] Server accepted connection from: (IP, port) = ('10.0.2.15', 39968)
-[03:44:53.669987] Connection ended!
-
-[03:44:54.670906] Server accepted connection from: (IP, port) = ('10.0.2.15', 39972)
-[03:44:54.676615] Connection ended!
-
-[03:44:54.676952] Server accepted connection from: (IP, port) = ('127.0.0.1', 58418)
-[03:44:54.677225] Connection ended!
-
-[03:44:55.652657] Server accepted connection from: (IP, port) = ('127.0.0.1', 58430)
-[03:44:55.652840] Connection ended!
-
-[03:44:55.653341] Server accepted connection from: (IP, port) = ('127.0.0.1', 58434)
-[03:44:55.653583] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/newdir/renamedfile.txt.
-[03:44:55.653611] Connection ended!
-
-[03:44:55.653702] Server accepted connection from: (IP, port) = ('127.0.0.1', 58442)
-[03:44:55.653766] Connection ended!
-
-[03:44:55.653994] Server accepted connection from: (IP, port) = ('127.0.0.1', 58448)
-[03:44:55.654071] Connection ended!
-
-[03:44:55.694679] Server accepted connection from: (IP, port) = ('127.0.0.1', 58454)
-[03:44:55.695030] Connection ended!
-
-[03:44:55.695168] Server accepted connection from: (IP, port) = ('10.0.2.15', 39986)
-[03:44:55.695463] PUSH
-Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/newdir/renamedfile.txt.
-[03:44:55.695567] Connection ended!
-
-[03:44:55.695676] Server accepted connection from: (IP, port) = ('10.0.2.15', 39996)
-[03:44:55.696147] Connection ended!
-
-[03:44:55.696323] Server accepted connection from: (IP, port) = ('10.0.2.15', 40008)
-[03:44:55.696512] PUSH
-Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir1/file1.txt.
-[03:44:55.696598] Connection ended!
-
-[03:44:55.696744] Server accepted connection from: (IP, port) = ('10.0.2.15', 40014)
-[03:44:55.697792] Connection ended!
-
-[03:44:55.699835] Server accepted connection from: (IP, port) = ('10.0.2.15', 40024)
-[03:44:55.700102] PUSH
-Request: moved,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir2/file2.txt,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir3/file2.txt.
-[03:44:55.700206] Connection ended!
-
-[03:44:55.700606] Server accepted connection from: (IP, port) = ('10.0.2.15', 40040)
-[03:44:55.700876] Connection ended!
-
-[03:44:56.696824] Server accepted connection from: (IP, port) = ('127.0.0.1', 58462)
-[03:44:56.705150] PUSH
-Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir1/file1.txt.
-[03:44:56.705462] Connection ended!
-
-[03:44:56.705972] Server accepted connection from: (IP, port) = ('127.0.0.1', 58474)
-[03:44:56.706512] PUSH
-Request: moved,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir2/file2.txt,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/P0eKB8Mc8Y/dir3/file2.txt.
-[03:44:56.706769] Connection ended!
-
-[03:44:56.707896] Server accepted connection from: (IP, port) = ('127.0.0.1', 58486)
-[03:44:56.708455] Connection ended!
-
-[03:44:56.720898] Server accepted connection from: (IP, port) = ('10.0.2.15', 40042)
-[03:44:56.721181] Connection ended!
-
-[03:44:57.709221] Server accepted connection from: (IP, port) = ('127.0.0.1', 58492)
-[03:44:57.710389] Connection ended!
-
-[03:44:57.722608] Server accepted connection from: (IP, port) = ('10.0.2.15', 40052)
-[03:44:57.723104] Connection ended!
-
-[03:44:58.710787] Server accepted connection from: (IP, port) = ('127.0.0.1', 58500)
-[03:44:58.711104] Connection ended!
-
-[03:44:58.724388] Server accepted connection from: (IP, port) = ('10.0.2.15', 40054)
-[03:44:58.724629] Connection ended!
-
-[03:44:59.713377] Server accepted connection from: (IP, port) = ('127.0.0.1', 58506)
-[03:44:59.713611] Connection ended!
-
-[03:44:59.725668] Server accepted connection from: (IP, port) = ('10.0.2.15', 40064)
-[03:44:59.725960] Connection ended!
+[04:02:35.346156] Server accepted connection from: (IP, port) = ('127.0.0.1', 52074)
+[04:02:35.346364] PULL
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir3.
+[04:02:35.346396] Connection ended!
+
+[04:02:35.346889] Server accepted connection from: (IP, port) = ('127.0.0.1', 52084)
+[04:02:35.346994] Connection ended!
+
+[04:02:36.221948] Server accepted connection from: (IP, port) = ('10.0.2.15', 37220)
+[04:02:36.224877] Connection ended!
+
+[04:02:36.348981] Server accepted connection from: (IP, port) = ('127.0.0.1', 40730)
+[04:02:36.349219] Connection ended!
+
+[04:02:37.226435] Server accepted connection from: (IP, port) = ('10.0.2.15', 37236)
+[04:02:37.230926] Connection ended!
+
+[04:02:37.350974] Server accepted connection from: (IP, port) = ('127.0.0.1', 40734)
+[04:02:37.351363] Connection ended!
+
+[04:02:38.231780] Server accepted connection from: (IP, port) = ('10.0.2.15', 37244)
+[04:02:38.231922] Connection ended!
+
+[04:02:38.352873] Server accepted connection from: (IP, port) = ('127.0.0.1', 40748)
+[04:02:38.353111] Connection ended!
+
+[04:02:38.355901] Server accepted connection from: (IP, port) = ('127.0.0.1', 40756)
+[04:02:38.356200] Connection ended!
+
+[04:02:38.358185] Server accepted connection from: (IP, port) = ('127.0.0.1', 40770)
+[04:02:38.359065] PUSH
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/file_syncer.py.
+[04:02:38.359188] Connection ended!
+
+[04:02:38.359369] Server accepted connection from: (IP, port) = ('127.0.0.1', 40778)
+[04:02:38.359513] Connection ended!
+
+[04:02:38.360073] Server accepted connection from: (IP, port) = ('127.0.0.1', 40786)
+[04:02:38.360319] PUSH
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/Hello/File2.py.
+[04:02:38.360418] Connection ended!
+
+[04:02:38.362259] Server accepted connection from: (IP, port) = ('127.0.0.1', 40798)
+[04:02:38.362836] Connection ended!
+
+[04:02:38.363021] Server accepted connection from: (IP, port) = ('127.0.0.1', 40804)
+[04:02:38.363246] PUSH
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/Hello/check.txt.
+[04:02:38.363345] Connection ended!
+
+[04:02:38.363491] Server accepted connection from: (IP, port) = ('127.0.0.1', 40812)
+[04:02:38.363975] Connection ended!
+
+[04:02:38.365271] Server accepted connection from: (IP, port) = ('127.0.0.1', 40826)
+[04:02:38.365542] PUSH
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/Hello/File1.py.
+[04:02:38.365640] Connection ended!
+
+[04:02:38.365809] Server accepted connection from: (IP, port) = ('127.0.0.1', 40840)
+[04:02:38.366435] Connection ended!
+
+[04:02:38.367857] Server accepted connection from: (IP, port) = ('127.0.0.1', 40848)
+[04:02:38.368145] PUSH
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/connection_logger.py.
+[04:02:38.368246] Connection ended!
+
+[04:02:38.368417] Server accepted connection from: (IP, port) = ('127.0.0.1', 40864)
+[04:02:38.368904] Connection ended!
+
+[04:02:38.369066] Server accepted connection from: (IP, port) = ('127.0.0.1', 40880)
+[04:02:38.369200] Connection ended!
+
+[04:02:38.369341] Server accepted connection from: (IP, port) = ('127.0.0.1', 40886)
+[04:02:38.369955] Connection ended!
+
+[04:02:38.372078] Server accepted connection from: (IP, port) = ('127.0.0.1', 40894)
+[04:02:38.372278] Connection ended!
+
+[04:02:38.372478] Server accepted connection from: (IP, port) = ('127.0.0.1', 40904)
+[04:02:38.372804] Connection ended!
+
+[04:02:38.372933] Server accepted connection from: (IP, port) = ('127.0.0.1', 40908)
+[04:02:38.373138] PUSH
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/Empty.
+[04:02:38.373236] Connection ended!
+
+[04:02:39.233387] Server accepted connection from: (IP, port) = ('10.0.2.15', 37252)
+[04:02:39.239268] PULL
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/file_syncer.py.
+[04:02:39.239427] Connection ended!
+
+[04:02:39.239701] Server accepted connection from: (IP, port) = ('10.0.2.15', 37264)
+[04:02:39.240007] PULL
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/Hello/File2.py.
+[04:02:39.240112] Connection ended!
+
+[04:02:39.240907] Server accepted connection from: (IP, port) = ('10.0.2.15', 37272)
+[04:02:39.241272] PULL
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/Hello/check.txt.
+[04:02:39.241457] Connection ended!
+
+[04:02:39.242099] Server accepted connection from: (IP, port) = ('10.0.2.15', 37284)
+[04:02:39.243815] PULL
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/Hello/File1.py.
+[04:02:39.244102] Connection ended!
+
+[04:02:39.244812] Server accepted connection from: (IP, port) = ('10.0.2.15', 37300)
+[04:02:39.246273] PULL
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/connection_logger.py.
+[04:02:39.247731] Connection ended!
+
+[04:02:39.248527] Server accepted connection from: (IP, port) = ('10.0.2.15', 37308)
+[04:02:39.248824] PULL
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,True,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/Jorge/Empty.
+[04:02:39.248969] Connection ended!
+
+[04:02:39.249595] Server accepted connection from: (IP, port) = ('10.0.2.15', 37322)
+[04:02:39.251387] Connection ended!
+
+[04:02:39.354598] Server accepted connection from: (IP, port) = ('127.0.0.1', 40912)
+[04:02:39.354818] Connection ended!
+
+[04:02:40.252306] Server accepted connection from: (IP, port) = ('10.0.2.15', 37330)
+[04:02:40.252557] Connection ended!
+
+[04:02:40.357796] Server accepted connection from: (IP, port) = ('127.0.0.1', 40918)
+[04:02:40.358110] Connection ended!
+
+[04:02:41.257053] Server accepted connection from: (IP, port) = ('10.0.2.15', 37340)
+[04:02:41.257212] Connection ended!
+
+[04:02:41.257258] Server accepted connection from: (IP, port) = ('10.0.2.15', 37354)
+[04:02:41.257319] Connection ended!
+
+[04:02:41.257951] Server accepted connection from: (IP, port) = ('10.0.2.15', 37358)
+[04:02:41.258301] PUSH
+User ID: QYk60YGk0K, Client ID: 1
+Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir1/file1.txt.
+[04:02:41.258439] Connection ended!
+
+[04:02:41.258631] Server accepted connection from: (IP, port) = ('10.0.2.15', 37370)
+[04:02:41.258790] Connection ended!
+
+[04:02:41.259390] Server accepted connection from: (IP, port) = ('10.0.2.15', 37382)
+[04:02:41.259663] PUSH
+User ID: QYk60YGk0K, Client ID: 1
+Request: moved,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir2/file2.txt,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir3/file2.txt.
+[04:02:41.259776] Connection ended!
+
+[04:02:41.362447] Server accepted connection from: (IP, port) = ('127.0.0.1', 40930)
+[04:02:41.363066] PULL
+User ID: QYk60YGk0K, Client ID: 2
+Request: deleted,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir1/file1.txt.
+[04:02:41.363289] Connection ended!
+
+[04:02:41.363515] Server accepted connection from: (IP, port) = ('127.0.0.1', 40934)
+[04:02:41.364850] PULL
+User ID: QYk60YGk0K, Client ID: 2
+Request: moved,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir2/file2.txt,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/dir3/file2.txt.
+[04:02:41.365271] Connection ended!
+
+[04:02:41.365834] Server accepted connection from: (IP, port) = ('127.0.0.1', 40948)
+[04:02:41.366445] Connection ended!
+
+[04:02:41.366658] Server accepted connection from: (IP, port) = ('127.0.0.1', 40952)
+[04:02:41.367422] PUSH
+User ID: QYk60YGk0K, Client ID: 2
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/newdir/renamedfile.txt.
+[04:02:41.367570] Connection ended!
+
+[04:02:41.367770] Server accepted connection from: (IP, port) = ('127.0.0.1', 40964)
+[04:02:41.368144] Connection ended!
+
+[04:02:41.368458] Server accepted connection from: (IP, port) = ('127.0.0.1', 40972)
+[04:02:41.368663] Connection ended!
+
+[04:02:41.369531] Server accepted connection from: (IP, port) = ('127.0.0.1', 40980)
+[04:02:41.369863] Connection ended!
+
+[04:02:42.258895] Server accepted connection from: (IP, port) = ('10.0.2.15', 37394)
+[04:02:42.265919] PULL
+User ID: QYk60YGk0K, Client ID: 1
+Request: created,False,/home/asi/Desktop/Asaf/NewCloudService/All/AllClients/QYk60YGk0K/newdir/renamedfile.txt.
+[04:02:42.266075] Connection ended!
+
+[04:02:42.266352] Server accepted connection from: (IP, port) = ('10.0.2.15', 37398)
+[04:02:42.266530] Connection ended!
+
+[04:02:42.381869] Server accepted connection from: (IP, port) = ('127.0.0.1', 40988)
+[04:02:42.382128] Connection ended!
+
+[04:02:43.267277] Server accepted connection from: (IP, port) = ('10.0.2.15', 37414)
+[04:02:43.269940] Connection ended!
+
+[04:02:43.383364] Server accepted connection from: (IP, port) = ('127.0.0.1', 41002)
+[04:02:43.383552] Connection ended!
+
+[04:02:44.269769] Server accepted connection from: (IP, port) = ('10.0.2.15', 37424)
+[04:02:44.273680] Connection ended!
+
+[04:02:44.383897] Server accepted connection from: (IP, port) = ('127.0.0.1', 41012)
+[04:02:44.384091] Connection ended!
+
+[04:02:45.274966] Server accepted connection from: (IP, port) = ('10.0.2.15', 37438)
+[04:02:45.275146] Connection ended!
+
+[04:02:45.385406] Server accepted connection from: (IP, port) = ('127.0.0.1', 41026)
+[04:02:45.385582] Connection ended!

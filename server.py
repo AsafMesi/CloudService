@@ -75,7 +75,7 @@ if __name__ == "__main__":
                 get_data_sock.close()
                 if cmd:
                     cu.update_clients(user_id, client_id, cmd)
-                    log.push_requested(cmd)
+                    log.push_requested(user_id, client_id, cmd)
 
             case "Pull":
                 get_data_sock.close()
@@ -86,7 +86,7 @@ if __name__ == "__main__":
                     user_root = cu.get_user_root(user_id)
                     update = updates.pop(0)
                     file_syncer.send_update(client_socket, user_root, update)
-                    log.push_requested(update)
+                    log.pull_requested(user_id, client_id, update)
                 else:
                     client_socket.close()
 
