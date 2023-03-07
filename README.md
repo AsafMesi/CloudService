@@ -40,5 +40,9 @@ All the connections to the server are being logged in a file called `connectionL
 - Whether the connection was successful or not
 - Any errors that occurred during the connection
 
+
+You may want to review the 'connectionLog.txt' file for more information on the connection status.
+
+
 ## Authors
 Asaf Mesialty & Shir Fintsy
