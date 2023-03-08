@@ -52,7 +52,6 @@ if __name__ == "__main__":
                 user_id, client_id = cu.add_user()
                 sys.stdout.write(user_id)
                 sys.stdout.flush()
-                sys.stdout.write(user_id)
                 client_socket.sendall(user_id.encode() + b'\n')
                 client_socket.sendall(client_id.encode() + b'\n')
                 user_root = cu.get_user_root(user_id)
