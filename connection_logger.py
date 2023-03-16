@@ -3,16 +3,13 @@ import os
 
 
 class ConnectionLogger:
-    def __init__(self, log_file_path=None):
-        if log_file_path is None:
-            log_file_path = "ConnectionLog.txt"
-
-        elif os.path.exists(log_file_path):
+    def __init__(self, log_file_path, description):
+        if os.path.exists(log_file_path):
             raise ValueError(f"Log file {log_file_path} already exists")
 
         self.log_file_path = log_file_path
-        with open(self.log_file_path, "w") as log_file:
-            log_file.write("CloudService connection log started!\n")
+        with open(self.log_file_path, 'w') as log_file:
+            log_file.write(f"{description}:\n")
 
     def _log(self, message):
         timestamp = datetime.datetime.now().strftime("[%H:%M:%S.%f]")

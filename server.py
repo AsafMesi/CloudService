@@ -5,10 +5,17 @@ import file_syncer
 import client_manager
 from connection_logger import ConnectionLogger
 
-port = int(sys.argv[1])
-root = os.getcwd()
+if not (len(sys.argv) == 2):
+    raise ValueError("Please Enter port parameter: [1024 < port < 49152].")
 
-# logged user details:
+port = int(sys.argv[1])
+
+if not (1024 < port < 49152):
+    raise ValueError("Port number should be between: 1025 and 49151.")
+
+root = os.getcwd()  # can be changed to a specific location.
+
+# logged user identifications:  (Can be changed to a dictionary in case of multiple connections).
 user_id = None
 client_id = None
 client_os = None
@@ -38,7 +45,7 @@ def get_identifications(read_sock):
 
 # -------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
-    log = ConnectionLogger()
+    log = ConnectionLogger("ConnectionLog.txt", "CloudService Server connection log")
     cu = client_manager.ClientManager(root)
     while True:
         # Waiting for client:

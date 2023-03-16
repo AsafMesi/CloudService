@@ -3,6 +3,7 @@ import sys
 import socket
 import time
 import file_syncer
+import client_observer
 
 if not (5 <= len(sys.argv) <= 6):
     raise ValueError("Please Enter parameters in the form:"
@@ -16,8 +17,8 @@ pulling_rate = int(sys.argv[4])
 user_id = 'None'
 client_id = 'None'
 
-if len(sys.argv) == 6:      # 6
-    user_id = sys.argv[5]   # 5
+if len(sys.argv) == 6:
+    user_id = sys.argv[5]
 
 pause_observer = None
 resume_observer = None
@@ -35,11 +36,10 @@ def get_server_socket(conn_type):
 
 
 def notify_server(event):
-    print(event)
     if event.event_type == "modified":
         if not event.is_directory:
             notify_file_modified(event)
-        # directory renaming cause move and modified event, so we will ignore the modified event for directories.
+        # else: directory renaming cause move and modified event, so we will ignore the modified event for directories.
         return
     pull()
     match event.event_type:
@@ -90,8 +90,8 @@ def notify_moved(event):
 
 
 def notify_file_modified(event):
-    notify_server(file_syncer.FileEvent("deleted", False, event.src_path))
-    notify_server(file_syncer.FileEvent("created",  False, event.src_path))
+    notify_server(client_observer.FileEvent("deleted", False, event.src_path))
+    notify_server(client_observer.FileEvent("created",  False, event.src_path))
 
 
 def pull():
@@ -103,11 +103,12 @@ def pull():
         if updates_count > 0:
             server_os = read_socket.readline().strip().decode()
             pause_observer()
-            applied_cmd = file_syncer.get_update(read_socket, root, server_os)
-            print(applied_cmd)
+            _ = file_syncer.get_update(read_socket, root, server_os)  # _ = applied_cmd
             resume_observer()
         else:
             pulling = False
+
+        # non-persistent - reconnects for every update.
         read_socket.close()
         server_sock.close()
 
@@ -119,7 +120,7 @@ def init_new_user():
     user_id = get_data_sock.readline().strip().decode()
     client_id = get_data_sock.readline().strip().decode()
     get_data_sock.close()
-    file_syncer.send_files(server_socket, root)
+    file_syncer.send_files(server_socket, root)  # persistent - send all files on the same connection.
 
 
 def init_new_client():
@@ -129,7 +130,7 @@ def init_new_client():
     server_socket = get_server_socket("NewClient")
     get_data_sock = server_socket.makefile(mode='rb')
     client_id = get_data_sock.readline().strip().decode()
-    file_syncer.get_files(get_data_sock, root)
+    file_syncer.get_files(get_data_sock, root)  # persistent - get all files on the same connection.
     get_data_sock.close()
     server_socket.close()
 
@@ -141,7 +142,7 @@ if __name__ == "__main__":
     else:
         init_new_client()
 
-    observer = file_syncer.ClientFileObserver(root, on_any_event=notify_server)
+    observer = client_observer.ClientFileObserver(root, on_any_event=notify_server)
 
     # While pulling updates, we would like to pause the observer.
     pause_observer = observer.un_schedule
@@ -157,6 +158,3 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         observer.stop()
         observer.join()
-
-
-
