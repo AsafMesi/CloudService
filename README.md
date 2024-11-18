@@ -44,5 +44,8 @@ All the connections to the server are being logged in a file called `connectionL
 You may want to review the 'connectionLog.txt' file for more information on the connection status.
 
 
+#### Here is a basic illustraion of how the project structre looks like:
+<img src="https://github.com/user-attachments/assets/eb6f5fd0-c0da-4271-8358-c6b26512b10d" alt="image" style="width:40%; height:auto;">
+
 ## Authors
 Asaf Mesialty & Shir Fintsy
